@@ -17,21 +17,20 @@ app.engine('mustache', mustacheExpress());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'mustache');
 
-
-//app.set('view engine', 'mustache');
 //app.set('views', __dirname + '/views');
+//var routhPath = __dirname+'/restaurant' 
+// console.log(path.resolve(__dirname, 'restaurant' + '/public'))
+// app.use(express.static(path.join(__dirname, 'restaurant' + '/public')));
 app.use(express.static(path.join(__dirname, 'public')));
 // set routes
 app.use('/', index)
 app.use('/api', api) // sample API Routes
 
-const port = 3000
+const port = 8081
 app.set('port', port)
 app.listen(port)
 
 module.exports = app
-
-
 // app.listen(3000)
 
 // var express = require('express')
